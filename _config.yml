@@ -13,20 +13,55 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Yijie Wu
-email: yijiewou@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Life is just like an art.
+title: Yijie WU Studio
+description: >- # this means to ignore newlines until "baseurl:"
+  宇宙的組成，不是原子、分子，而是許許多多的故事。
+  The universe is made of stories, not of atoms.
+  .... Muriel Rukeyser
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-#github_username:  jekyll
+url: "http://www.yijiewu.tw/" # the base hostname & protocol for your site, e.g. http://example.com
+
+author:
+  name: Yijie Wu
+  facebook: https://www.facebook.com/yijiewustudio/
+#  email: felix.profecia@gmail.com
+#  facebook: felix125.chang
+#  github: felix125
+
+#disqus:
+#  shortname: profecia  #the Disqus shortname for the site
+
+## Google Analytics ##
+#ga_tracking_id: UA-105756585-1  #Google analytics id for the site
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      comment: true
+
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
 
 # Build settings
 markdown: kramdown
-theme: minima
-#gems:
-#  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
