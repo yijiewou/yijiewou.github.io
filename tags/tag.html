@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <h1>
     <span> 文章列表 </span>
     <a href="{{ post.url | prepend: site.baseurl }}" style="text-decoration:none;color:#003D79">
@@ -53,7 +54,6 @@ The purpose of this snippet is to list all the tags you have in your site.
 {% endfor %}
 
 <hr color="#b0b0b0" size="1" />
-
 {% comment %}
 =======================
 The purpose of this snippet is to list all your posts posted with a certain tag.
@@ -70,17 +70,25 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
         {% if post.tags contains tag %}
             <a href="{{ post.url | prepend: site.baseurl }}" style="text-decoration:none;color:#003D79">
                 {{ post.title }},
-                <small>{{ post.date | date_to_string }}</small>
+                {% if post.date %}
+                    <small>{{ post.date | date_to_string }}</small>
+                {% else %}
+                    <small> Unknown</small>
+                {% endif %}
             </a>
             <br />
-         {% endif %}
+        {% endif %}
     {% endfor %}
 
     {% for page in site.pages %}
         {% if page.tags contains tag %}
             <a href="{{ page.url }}" style="text-decoration:none;color:#003D79">
                 {{ page.title }},
-                <small>{{ post.date | date_to_string }}</small>
+                {% if post.date %}
+                    <small>{{ post.date | date_to_string }}</small>
+                {% else %}
+                    <small> Unknown </small>
+                {% endif %}
             </a>
             <br />
         {% endif %}
