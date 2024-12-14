@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   The universe is made of stories, not of atoms.
   .... Muriel Rukeyser
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.yijiewu.tw/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://yijiewou.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 author:
   name: Yijie Wu
